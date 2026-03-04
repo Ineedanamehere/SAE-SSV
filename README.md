@@ -20,7 +20,9 @@ scikit-learn==1.4.2
 tqdm==4.66.4
 openai==1.14.0
 ```
-
+conda create -n sae python=3.10 -y                                                                                                                     
+conda activate sae                                                                                                                                     
+pip install -r requirements.txt   
 ## Usage
 
 The implementation of SAE-SSV on Gemma2 and Llama3.1 can be referred to `saessv-demo.ipynb`.
