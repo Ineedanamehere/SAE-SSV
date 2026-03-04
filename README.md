@@ -1,5 +1,7 @@
 # SAE-SSV
 This paper introduces a novel supervised steering approach that operates in sparse, interpretable representation spaces. We employ sparse autoencoders (SAEs) to obtain sparse latent representations that aim to disentangle semantic attributes from model activations. Then we train linear classifiers to identify a small subspace of task-relevant dimensions in latent representations. Finally, we learn supervised steering vectors constrained to this subspace, optimized to align with target behaviors. Experiments across sentiment, truthfulness, and political polarity steering tasks with multiple LLMs demonstrate that our supervised steering vectors achieve higher success rates with minimal degradation in generation quality compared to existing methods. 
+
+**Accepted by EMNLP 2025**
 ## Requirements
 
 The code requires the following Python packages:
@@ -27,3 +29,15 @@ The implementation of SAE-SSV on Gemma2 and Llama3.1 can be referred to `saessv-
 > This is a preliminary version of the code.  
 > We will continue to update it and package it into a more general format as a .py file in the future.
 
+
+### Citation
+If you find the code is valuable, please use this citation.
+```
+@inproceedings{he2025sae,
+  title={Sae-ssv: Supervised steering in sparse representation spaces for reliable control of language models},
+  author={He, Zirui and Jin, Mingyu and Shen, Bo and Payani, Ali and Zhang, Yongfeng and Du, Mengnan},
+  booktitle={Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing},
+  pages={2207--2236},
+  year={2025}
+}
+```
