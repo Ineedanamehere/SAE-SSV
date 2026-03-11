@@ -27,6 +27,14 @@ pip install -r requirements.txt
 
 The implementation of SAE-SSV on Gemma2 and Llama3.1 can be referred to `saessv-demo.ipynb`.
 
+## Datasets
+
+We use the following datasets in our experiments:
+
+- **Sentiment**: [Zirui22Ray/sentiment-dataset](https://huggingface.co/datasets/Zirui22Ray/sentiment-dataset)
+- **Truthfulness**: [wwbrannon/TruthGen](https://huggingface.co/datasets/wwbrannon/TruthGen)
+- **Politics**: [Zirui22Ray/politics-dataset-demo](https://huggingface.co/datasets/Zirui22Ray/politics-dataset-demo)
+
 > [!NOTE]
 > This is a preliminary version of the code.  
 > We will continue to update it and package it into a more general format as a .py file in the future.
