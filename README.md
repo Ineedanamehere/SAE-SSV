@@ -30,12 +30,61 @@ pip install -r requirements.txt
 The demo implementation of SAE-SSV on Gemma2 and Llama3.1 can be referred to `saessv-demo.ipynb`.
 
 ## SAE_SSV Training
+### Configuration
 
-The implementation of SAE-SSV can be found in `sae_probe.py`.
+Edit the config section in `sae_probe.py`:
+
+```python
+DEVICE = "cuda:2"
+TARGET_LAYER = 20
+SAE_RELEASE = "gemma-scope-9b-pt-res-canonical"
+SAE_ID = "layer_20/width_16k/canonical"
+SPARSITY_THRESHOLD = 1e-1          # L1 threshold for feature selection
+steer_scale = [4.0, 5.0, 6.0, -4.0, -5.0, -6.0]
+DATASET_TYPE = "sentiment"         # "politics", "truthfulness", or "sentiment"
+OUTPUT_DIR = f"probe_results_{DATASET_TYPE}_layer{TARGET_LAYER}"
+```
+### Usage
+
+```bash
+python sae_probe.py
+```
+
+### Output Files
+
+| File | Description |
+|------|-------------|
+| `{dataset}_important_dimensions.npy` | Selected SAE feature indices |
+| `{dataset}_ssv_results.pt` | Trained SSV and training metadata |
+| `generation_results.json` | Steered generation outputs |
+
+### Class Labels by Dataset
+
+| Dataset | Class A (label=0) | Class B (label=1) |
+|---------|-------------------|-------------------|
+| `politics` | left | right |
+| `truthfulness` | false | true |
+| `sentiment` | negative | positive |
+
 
 ## SAE_SSV Evaluation
+### Key Parameters
 
-`Evaluation.py`.
+| Parameter | Description |
+|-----------|-------------|
+| `result_dir` | Path to directory containing `generation_results.json` |
+| `steered_key` | JSON key identifying steered outputs (e.g., steering strength) |
+| `baseline_key` | JSON key identifying baseline outputs |
+| `task_type` | Evaluation type: `"politics"`, `"truthfulness"`, or `"sentiment"` |
+| `device` | CUDA device ID (e.g., `"0"`, `"1"`, `"0,1"` for multi-GPU) |
+| `max_samples` | Set to integer to limit evaluation samples, `None` for all |
+
+### Basic Usage
+
+```bash
+python Evaluation.py
+```
+
 ## Datasets
 
 We use the following datasets in our experiments:
