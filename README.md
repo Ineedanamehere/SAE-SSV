@@ -2,6 +2,8 @@
 This paper introduces a novel supervised steering approach that operates in sparse, interpretable representation spaces. We employ sparse autoencoders (SAEs) to obtain sparse latent representations that aim to disentangle semantic attributes from model activations. Then we train linear classifiers to identify a small subspace of task-relevant dimensions in latent representations. Finally, we learn supervised steering vectors constrained to this subspace, optimized to align with target behaviors. Experiments across sentiment, truthfulness, and political polarity steering tasks with multiple LLMs demonstrate that our supervised steering vectors achieve higher success rates with minimal degradation in generation quality compared to existing methods. 
 
 **Accepted by EMNLP 2025**
+
+The link of the paper is: https://aclanthology.org/2025.emnlp-main.112.pdf
 ## Requirements
 
 The code requires the following Python packages:
