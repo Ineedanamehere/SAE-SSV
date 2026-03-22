@@ -27,10 +27,13 @@ pip install -r requirements.txt
 
 The demo implementation of SAE-SSV on Gemma2 and Llama3.1 can be referred to `saessv-demo.ipynb`.
 
-## SAE_SSV 
+## SAE_SSV Training
 
 The implementation of SAE-SSV can be found in `sae_probe.py`.
 
+## SAE_SSV Evaluation
+
+`Evaluation.py`.
 ## Datasets
 
 We use the following datasets in our experiments:
