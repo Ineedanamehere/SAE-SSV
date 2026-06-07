@@ -134,8 +134,7 @@ We use the following datasets in our experiments:
 - **Truthfulness**: [wwbrannon/TruthGen](https://huggingface.co/datasets/wwbrannon/TruthGen)
 - **Politics**: [Zirui22Ray/politics-dataset-demo](https://huggingface.co/datasets/Zirui22Ray/politics-dataset-demo)
 
-> [!NOTE]
-> This v2 implementation is still a lightweight experiment script rather than a full experiment framework. It focuses on a compact, inspectable single-GPU workflow for Stage 1 dimension selection, SSV training, multi-scale generation, and evaluation.
+
 
 ### Citation
 
