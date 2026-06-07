@@ -29,6 +29,8 @@ pip install -r requirements.txt
 
 The demo implementation of SAE-SSV on Gemma2 and Llama3.1 can be referred to `saessv-demo.ipynb`.
 
+A Python package-style implementation that encapsulates the Jupyter-based workflow in this repository is available at [zhangshixuan323-afk/SAE-SSV_jupyterlike](https://github.com/zhangshixuan323-afk/SAE-SSV_jupyterlike).
+
 ## SAE_SSV Training
 See SAE-SSV-V2 for the Training Details
 
